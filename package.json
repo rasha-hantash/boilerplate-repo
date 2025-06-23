@@ -5,6 +5,7 @@
     "@connectrpc/connect": "^2.0.2",
     "@connectrpc/connect-query": "^2.1.0",
     "@connectrpc/connect-web": "^2.0.2",
+    "@connectrpc/protoc-gen-connect-query": "^2.1.0",
     "install": "^0.13.0"
   }
 }
