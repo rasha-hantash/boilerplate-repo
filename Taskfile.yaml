@@ -11,3 +11,21 @@ tasks:
     cmds:
       - go build -o platform/api/api ./platform/api/main.go
       - cd frontend && npm run build
+
+  # Migrations 
+  ## E.g. task local:migrate:create NAME=create_todos_table
+  local:migrate:create:
+    vars:
+        NAME: "{{.NAME}}"
+    cmds:
+      - migrate create -ext sql -dir platform/sql-migrations/ -seq {{.NAME}}
+
+  ## E.g. task local:migrate:up
+  local:migrate:up:
+      cmds:
+        - migrate -path platform/sql-migrations/ -database "postgresql://admin:your_password@localhost:5438/traba?sslmode=disable" -verbose up
+
+  ## E.g. task local:migrate:down 
+  local:migrate:down:
+      cmds:
+        - migrate -path platform/sql-migrations/ -database "postgresql://admin:your_password@localhost:5438/traba?sslmode=disable" -verbose down
