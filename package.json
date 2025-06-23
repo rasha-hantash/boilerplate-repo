@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@bufbuild/protobuf": "^2.5.2",
+    "@bufbuild/protoc-gen-es": "^2.5.2",
+    "@connectrpc/connect": "^2.0.2",
+    "@connectrpc/connect-query": "^2.1.0",
+    "@connectrpc/connect-web": "^2.0.2",
+    "install": "^0.13.0"
+  }
+}

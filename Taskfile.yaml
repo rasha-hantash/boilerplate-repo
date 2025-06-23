@@ -1,0 +1,13 @@
+version: '3'
+
+tasks:
+  buf-lint:
+    cmds:
+      - bunx buf lint
+  buf-gen:
+    cmds:
+      - bunx buf generate
+  build:
+    cmds:
+      - go build -o platform/api/api ./platform/api/main.go
+      - cd frontend && npm run build
