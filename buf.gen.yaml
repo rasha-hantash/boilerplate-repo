@@ -12,4 +12,6 @@ plugins:
     include_imports: true
     # Add more plugin options here
     opt: target=ts
-  
+  - local: protoc-gen-connect-query
+    out: frontend/src/gen
+    opt: target=ts
